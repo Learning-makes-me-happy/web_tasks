@@ -23,7 +23,7 @@ def getImage(page,i):
     #打印图片url
     for item in items:
         print(item)
-        print i
+        print
         path='D:\picture'
         #图片存入本地，按i命名，本地需要新建一个命名为picture的文件
         createDir(path)
@@ -53,4 +53,4 @@ for j in range(1,5):
     urln = url + str(j)
     print urln
     page = getPage(urln)
-    i=getImage(page,i)
+    i=getImage(page,i)#i值为上一循环后图片数目，为防止命名覆盖，要将i与图片数通增长
