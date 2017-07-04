@@ -3,7 +3,7 @@ import urllib
 import urllib2
 import re
 import os
-from bs4 import BeautifulSoup
+#from bs4 import BeautifulSoup
 #通过url获取页面信息
 def getPage (url):
     #传入url，通过request类将url存储在response中
