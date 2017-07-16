@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="login.css">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+		<script type="text/javascript">
+		window.onload = function(){
+			var atype=document.getElementById('type');
+			var obut=document.getElementById('button');
+			var flag=true;
+			obut.onclick=function(){
+				if(flag){
+					atype.type='text';
+					flag=false;
+					obut.value='hide';
+				}
+				else{
+					atype.type='password';
+					flag=true;
+					obut.value='show';
+				}
+			}
+
+		}
+		</script>
+	</head>
+	<body>
+		<div class="aform">
+			<h1>LOGIN</h1>
+			<form>
+				<div class="content">
+					<label>Name:</label>
+					<br><input type="text" name="name" placeholder="please input your name">
+				</div>
+				<div class="content">
+					<label>Password:</label>
+					<br><input type="password" name="password" id="type" placeholder="please input your password">
+					<div class="lable"><input type="button" value="show" id="button"></div>
+				</div>
+				<div class="checkbox">
+				<input type="checkbox" name="remember" value="" />Remember Password
+				</div>
+				<button type="submit" >login</button>
+				<button type="submit" >register</button>
+			</form>
+		</div>
+	</body>
+</html>		 
