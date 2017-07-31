@@ -1,0 +1,62 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0" />
+	<title>Bootstrap响应式登录界面</title>
+	<link rel="stylesheet" type="text/css" href="login.css">
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">  
+	<script type="text/javascript" src="login.js"></script>
+</head>
+<body>
+<div class="box ">
+	<div class="login-box">
+		<ul class="list-inline">
+			<li id="tab1" onclick="myclick(1)">SIGNED IN</li>
+  			<li  id="tab2" onclick="myclick(2)" style="background-color:rgba(47,79,79,0.5);">SIGNED UP</li>
+		</ul>
+		<div class="login-content ">
+			<div class="aform tab_css"   id="tab1_content"  style="display: block">
+				<form action="#" method="post">
+					<div class="form-group col-xs-offset-2">
+						<div class="col-xs-12  ">
+							 <label for="name" class="col-sm-4 control-label">USERNAME:</label>
+						</div>	 
+						<div class="col-xs-12  ">
+							<div class="input-group">
+								<input type="text" id="username" name="username" class="form-control" placeholder="please input your name">
+							</div>
+						</div>
+					</div>
+					<div class="form-group col-xs-offset-2">
+						<div class="col-sm-12  ">
+							<label for="lpassword" class="col-sm-4 control-label   ">PASSWORD:</label>
+						</div>
+						<div class="col-sm-12  ">
+							<div class="input-group">
+								<input type="password" id="type" name="password"class="form-control" placeholder="please input your password"><span class="glyphicon glyphicon-eye-open" id="button"></span>
+							</div>
+						</div>	
+					</div>
+					<div class=" col-xs-offset-2 col-md-12">
+						<div class="input-group">
+							<label><input type="checkbox">Keep me Signed in</label>
+							<a>Forget Password？</a>
+						</div>
+					</div>		
+					<div class="form-group  text-center" style="margin-top:-20px;">
+						<div class="col-lg-offset-3 col-md-6 ">
+							<button type="submit" class="btn btn-sm btn-info">SIGN IN</button>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="aform  tab_css"   id="tab2_content">
+				
+			</div>
+	           </div>
+	</div>
+</div>
+</body>
+
+</html>

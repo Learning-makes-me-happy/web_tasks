@@ -1,0 +1,155 @@
+html,body {
+	height: 100%;
+}
+body{
+	background: url(http://pic.qiantucdn.com/58pic/18/17/00/94v58PICITk_1024.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position:100%;
+	font-family:"微软雅黑",serif;
+}
+.box{
+	margin: 0 auto;
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.login-box {
+	width: 100%;
+	max-width:440px;
+	height: 410px;
+	position: absolute;
+	top: 50%;
+	margin-top: -205px;
+	background: rgba(19, 35, 47, 0.5);
+	box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);	
+}
+ul,li{
+	margin:0px !important;
+	padding:0px !important;
+	cursor: pointer;
+}
+/*ul{
+background-color:rgba(47,79,79,0.5);
+}*/
+ul>li{
+	height:64px;
+	width:49.4%;
+	text-align:center;
+	line-height:64px;
+	color: white ;
+	text-align: center;
+	font-size: 30px;
+	font-weight:bold;
+	padding:10px;
+
+}
+.login-content {
+	
+	height: 300px;
+	width: 100%;
+	max-width:440px;
+	float: left;
+}		
+	
+
+.aform {
+	width: 100%;
+	max-width:440px;
+	height: 200px;
+	padding-top: 25px;
+	border-radius: 4px;
+}
+.form-group {
+	margin-bottom: 0px !important;
+}
+
+.input-group {
+	margin: 0px 0px 30px 0px !important;
+}
+.form-group label{
+	color: rgba(255, 255, 255, 0.5);
+	font-size: 20px;
+}	
+.form-group input{
+	width: 50%;
+	border-radius: 3px;
+	color:black;
+	font-size: 20px;
+	margin-bottom:5px;
+	box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;	
+	 border: 1px solid rgb(12, 76, 87);  
+}
+.form-group input:hover{
+	background: rgb(40, 137, 154);
+	/* box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.2) inset;*/
+ 	color:white;
+}
+.input-group:nth-of-type(2){
+	position:relative;
+}
+.input-group a{
+	text-decoration:none;
+	color:white;
+	margin-left:10px;
+}
+.input-group span{
+	position:absolute;
+	left:275px;
+	top:8px;
+	z-index:10;
+	color:#cccccc;
+}
+.btn{
+	cursor: pointer;
+	background-color: #87CEEB;
+	font-weight: bold;
+	color: white;
+	margin-bottom: 20px;
+}
+.btn:hover{
+	box-shadow: 0 0 0 2px white, 0 0 0 3px  #20B2AA;
+	font-size:105%;
+}
+
+
+@media screen and (max-width:360px){
+	ul>li{
+		font-size:25px;
+		width:49%;
+		height:40px;
+		text-align:center;
+		line-height:40px;
+	}
+	.input-group>label{
+		padding-left:-25px;
+		margin-left:-45px;
+	}
+	.form-group:nth-of-type(1),.form-group:nth-of-type(2){
+	margin-left:10px;
+	}
+}
+
+@media screen and (min-width:500px){
+	.login-box {
+		left: 50%;
+		margin-left: -250px;
+	}
+	
+}
+aform:last-child{
+	width: 100%;
+	max-width:440px;
+	height: 410px;
+	position: absolute;
+	top: 50%;
+	margin-top: -205px;
+	background: rgba(19, 35, 47, 0.5);
+	box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+	position:relative;
+}
+aform:last-child a{
+	position:absolute;
+	left:0px;
+	top:0px;
+}

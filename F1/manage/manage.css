@@ -1,0 +1,31 @@
+body{
+	margin-top: -20px !important;
+}
+table {
+text-align: center;
+border-collapse: collapse;
+border: 1px solid gray;
+}
+div{
+	margin:0px auto;
+	background: url("http://pic.qiantucdn.com/58pic/18/17/00/94v58PICITk_1024.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position:100%;
+}
+td:nth-of-type(6),td:nth-of-type(7){
+	cursor: pointer;
+}
+form{
+	text-align: center;
+	margin: 20px 0px 50px 50px;
+	
+}
+form>div.form-group:nth-of-type(4){
+	margin:50px  0px;
+
+}
+#tr1 {
+background: #99d6ff;
+
+}
