@@ -1,0 +1,94 @@
+.public,
+#banner,
+#banner img,
+#banner .con,
+#banner .con li {
+  width: 500px;
+  height: 300px;
+}
+#banner {
+  position: relative;
+  margin: 100px auto;
+}
+#banner .con li {
+  position: absolute;
+}
+#banner .con span {
+  width: 30px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  position: absolute;
+}
+#banner .con span:nth-of-type(1) {
+  left: 40px;
+  top: 90px;
+}
+#banner .con span:nth-of-type(2) {
+  right: -40px;
+  top: 90px;
+}
+#banner .but {
+  width: 100px;
+  height: 13px;
+  position: absolute;
+  top: 250px;
+  left: 400px;
+  z-index: 100;
+}
+#banner .but li {
+  width: 15px;
+  height: 15px;
+  float: left;
+  border-radius: 50%;
+  font-size: 12px;
+  margin-right: 5px;
+  cursor: pointer;
+  text-align: center;
+  background: white;
+}
+#banner .but li.current {
+  background: black;
+  color: #fff;
+}
+#banner div:nth-of-type(1) {
+  width: 500px;
+  height: 70px;
+  position: absolute;
+  top: 250px;
+  left: 40px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+#banner div:nth-of-type(2) {
+  width: 350px;
+  height: 40px;
+  line-height: 40px;
+  position: absolute;
+  top: 250px;
+  left: 40px;
+  color: #fff;
+  font-size: 14px;
+  text-indent: 2em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#banner div:nth-of-type(2):first-letter {
+  font-size: 25px;
+}
+* {
+  padding: 0px;
+  margin: 0px;
+}
+ul {
+  margin-left: 40px;
+  margin-top: 10px;
+}
+ul,
+li {
+  list-style-type: none;
+}

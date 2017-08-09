@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="jquery-3.1.1.js"></script>
+
+</head>
+<body>
+	<div id="banner">
+		<ul class="con" id="picList">
+			<li><img src="imgs1/banner1.jpg"></li>
+			<li><img src="imgs1/banner2.jpg"></li>
+			<li><img src="imgs1/banner3.jpg"></li>
+			<li><img src="imgs1/banner4.jpg"></li>
+			<span id="left"><</span>
+			<span id="right">></span>		
+		</ul>
+		<ul class="but">
+			<li class="current"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+		<div id="info_bg">
+		</div>
+		<div id="info">
+		</div>
+		
+	</div>
+</body>
+<script type="text/javascript">
+	var times=null;
+	var index = 1;
+	var idx;
+	var moveIdx=0;
+	$(function(){
+		var arr=new Array(
+			"吴邪,生于盗墓世家，长沙老九门狗五爷之孙吴家现任当家。",
+			"张起灵作为张家末代族长，只身在长白山青铜门后独守十年。十年后,回归。",
+			"王胖子，王半月，与吴邪、张起灵组成盗墓铁三角，自称北派摸金校尉。",
+			"粽子，吉祥物之一啊",
+			"尸蹩，吉吉吉吉祥物……"
+			);
+
+
+		// 点击下方li标签，图片实现跳转
+		$(".con li:not(:first-child)").hide();	//除了第一张都隐藏
+		$("#info").html(arr[0]);		//下方显示数组中第一条信息
+		$(".but li").mouseover(function(){
+			window.clearInterval(times);		//清时钟，防止其越来越快
+			$(this).addClass('current').siblings().removeClass('current');	//鼠标移上下方li标签，添加class  .current 并清除所有li下的样式
+			idx = $(this).index();		//记录鼠标移动上去的下标
+			$(".con li").eq(idx).fadeIn(500).siblings().fadeOut(1000);		//对应下标图片实现淡入淡出效果
+			$("#info").html(arr[idx]);		//对应数组内信息改变
+		}).mouseout(function(){
+			index= idx+1;		//鼠标移开后，继续播放，用index记录此时下标
+			autoPlay();
+		})
+
+		//自动播放
+		function autoPlay(){
+ 			times =window.setInterval(function(){
+ 			$(".but li").eq(index).addClass('current').siblings().removeClass('current');
+ 			$(".con li").eq(index).fadeIn(500).siblings().fadeOut(1000);	//index为全局变量，因而从mouseover触发时的图片开始自动播放
+ 			$("#info").html(arr[index]);	
+ 				index++;
+ 				moveIdx=index;
+	 			if(index>3){
+	 				index = 0;
+	 			}
+
+ 			},1500);
+ 			//return moveIdx;
+ 		}
+ 		autoPlay();	 
+
+ 		// 左右点击图片移动
+		var bannerDiv=document.querySelector("#banner")
+ 		var spanList=bannerDiv.querySelectorAll("span");
+ 		var ull=bannerDiv.querySelector(".con");
+ 		$("#banner span").hide();
+ 		ull.onmouseover=function(){
+			window.clearInterval(times);
+ 			$("#banner span").show();
+	 		for(var i=0;i<spanList.length;i++){
+				spanList[i].index=i;
+				spanList[i].onclick=function(){
+					if(this.index==0){		//点击左边，图片下标--，播放上一张图片
+						// alert(moveIdx);
+						moveIdx--;
+						if(moveIdx<0) moveIdx=3;
+						
+					}else{
+						moveIdx++;
+						if(moveIdx>3) moveIdx=0;	//点击右边，图片下标++，播放下一张图片
+					}
+					$("#info").html(arr[moveIdx]);	//下方信息，li小圆点，图片随之改变
+					$(".but li").eq(moveIdx).addClass('current').siblings().removeClass('current');
+ 					$(".con li").eq(moveIdx).fadeIn(1500).siblings().fadeOut(1500);
+
+					index=moveIdx;	//记录此时点击到的图片下标，用于以本张图片为起点，自动播放
+
+				}
+			}
+		}
+		ull.onmouseout=function(){
+			autoPlay();	
+			$("#banner span").hide();	//恢复自动播放
+		}
+
+
+		//手机端触屏滑动无法实现
+
+		// function mobil(){
+		// 	var bannerDiv=document.querySelector("#banner")
+ 		// 	var ull=bannerDiv.querySelector(".con");
+		// 	var iStartTouchX=0
+		// 	var iStartX=0
+		// 	bind(ull,"touchstart",fnStart)
+		// 	bind(ull,"touchmove",fnMove)
+		// 	bind(ull,"touchend",fnEnd)
+		// 	function fnStart(ev){
+		// 		oList.style.transition="none"
+		// 		ev = ev.changedTouches[0]
+		// 		iStartTouchX=ev.pageX
+		// 		clearInterval(times)
+		// 		$(".but li").trriger("mouseover")
+		// 	}
+			
+		// 	function fnMove(ev){
+		// 		clearInterval(times)
+		// 		ev = ev.changedTouches[0];
+		// 		var iDx = ev.pageX-iStartTouchX
+
+		// 		if( iDx>0){
+		// 			index++;
+		// 			$(".but li").trriger("mouseover")
+		// 			if(idx>3) idx=0;
+		// 		}
+		// 		else{
+		// 			index--;
+		// 			$(".but li").trriger("mouseover")
+		// 			if(idx<0) idx=3;
+		// 		}
+		// 	}
+		// 	function fnEnd(){
+		// 		autoPlay();
+		// 	}
+		// }
+		// mobil();
+
+
+ 	})
+</script>
+</html>
