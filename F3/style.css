@@ -1,0 +1,31 @@
+.contain>canvas,div{
+	float:left;
+}
+.contain input{
+	width: 80px;
+	height: 25px;
+
+}
+.contain>div>div{
+	margin-left: 25px;
+}
+
+.contain span{
+	float:left;
+	width:143px;
+	height:30px;
+	background:red;
+	position:absolute;
+	top:170px;
+	left:325px;
+}
+.contain{
+	position:relative;
+}
+em{
+	width:10px;
+	height:10px;
+	border:2px solid black;
+	position:absolute;
+	border-radius:50%;
+}

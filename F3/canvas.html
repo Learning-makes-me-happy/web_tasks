@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+</head>
+<body>
+	<div class="contain">
+		<canvas width="300" height="300" id="myCanvas"></canvas>
+		<div>
+			<div>
+				<label>R</label><input type="number"  class="form-control" min="0" max="255" value="255"/>
+				<label>G</label><input type="number"  class="form-control" min="0" max="255" value="0"/>
+				<label>B</label><input type="number"  class="form-control" min="0" max="255" value="0"/>
+			</div>
+			<em id="point"></em>
+			<em id="fix"></em>
+			<div>
+				<label>H</label><input type="number"  class="form-control" min="0" max="1" value="0"/>
+				<label>S</label><input type="number"  class="form-control" min="0" max="1" value="1"/>
+				<label>L</label><input type="number"  class="form-control" min="0" max="1" value="0.5"/>
+			</div>
+			<span id="smallShow"></span>
+		</div>
+		
+	</div>
+</body>
+<script type="text/javascript" src="canvas.js"></script>

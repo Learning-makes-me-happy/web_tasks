@@ -1,0 +1,31 @@
+{
+  "name": "web_tasks",
+  "version": "1.0.0",
+  "description": "For my web tasks",
+  "main": "index.js",
+  "dependencies": {
+    "gulp-less": "^3.3.2",
+    "less": "^2.7.2",
+    "npm": "^3.10.10"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.3.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Learning-makes-me-happy/web_tasks.git"
+  },
+  "keywords": [
+    "199709"
+  ],
+  "author": "liaojingya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Learning-makes-me-happy/web_tasks/issues"
+  },
+  "homepage": "https://github.com/Learning-makes-me-happy/web_tasks#readme"
+}
